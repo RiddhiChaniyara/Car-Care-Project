@@ -1,0 +1,258 @@
+:root {
+    --primary: #F77D0A;
+    --secondary: #2B2E4A;
+    --light: #F4F5F8;
+    --dark: #1C1E32;
+}
+
+/* Font Weights */
+h1, h2, .font-weight-bold {
+    font-weight: 700 !important;
+}
+
+h3, h4, .font-weight-semi-bold {
+    font-weight: 600 !important;
+}
+
+h5, h6, .font-weight-medium {
+    font-weight: 500 !important;
+}
+
+/* Button Sizes */
+.btn-square, .btn-sm-square, .btn-lg-square {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+
+.btn-square {
+    width: 36px;
+    height: 36px;
+}
+
+.btn-sm-square {
+    width: 28px;
+    height: 28px;
+}
+
+.btn-lg-square {
+    width: 46px;
+    height: 46px;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 30px;
+    z-index: 99;
+}
+
+/* Navbar Styling */
+.nav-bar::before, .nav-bar::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 50%;
+}
+
+.nav-bar::before {
+    top: 0;
+    left: 0;
+    background: var(--dark);
+}
+
+.nav-bar::after {
+    bottom: 0;
+    left: 0;
+    background: #ffffff;
+}
+
+/* Navbar Links */
+.navbar-dark .navbar-nav .nav-link {
+    padding: 30px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--light);
+    outline: none;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+
+/* Navbar Media Queries */
+@media (max-width: 991.98px) {
+    .navbar-dark .navbar-nav .nav-link {
+        padding: 10px 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-dark .navbar-nav .nav-link {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+}
+
+
+.page-header {
+    height: 400px;
+    margin-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(28, 30, 50, .9), rgba(28, 30, 50, .9)), url(../img/bg-banner.jpg);
+    background-attachment: fixed;
+}
+
+@media (max-width: 991.98px) {
+    .page-header {
+        height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-header {
+        height: 200px; /* Further reduce height */
+        background-size: cover; /* Ensure background covers the area */
+        background-attachment: scroll; /* Disable fixed background on small screens */
+    }
+}
+
+
+/* Selected Details container styling */
+#selected-details {
+    border: 2px solid #4488e1; /* Solid blue border matching the alert-info theme */
+    border-radius: 8px; /* Rounded corners for smooth edges */
+    padding: 20px; /* Adds padding inside the container */
+    background-color: #ced0d1; /* Light blue background to complement alert-info */
+    margin-top: 20px; /* Space above the container */
+
+    /* Centering and width adjustments */
+    max-width: 800px; /* Maximum width of the container */
+    width: 100%; /* Ensures the container scales responsively */
+    margin-left: auto; /* Centers the container horizontally */
+    margin-right: auto; /* Centers the container horizontally */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Ensure consistent padding for inner text and spacing */
+#selected-details p {
+    margin-bottom: 10px; /* Space between paragraphs */
+}
+
+/* Styling for the heading in the Selected Details container */
+#selected-details h5 {
+    margin-bottom: 15px; /* Adds space below the heading */
+    font-weight: 700; /* Makes the heading bold */
+    color: #333; /* Darker color for better contrast */
+}
+
+
+
+/* Car Models Section */
+.car-models {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 50px; 
+}
+
+.car-model {
+   background-color: var(--light); 
+   padding: 20px; 
+   margin: 15px; 
+   border-radius: 8px; 
+   transition: background-color 0.5s; 
+   width: 300px; /* Fixed width for better alignment */
+}
+
+.car-model:hover {
+   background-color: var(--secondary); 
+}
+
+.car-model h2 {
+   font-weight: 600; 
+   color: var(--dark); 
+}
+
+.car-model p {
+   margin-top: 10px; 
+}
+
+/* Contact Info Section */
+.contact-info {
+   text-align: center; 
+   margin-top: 40px; 
+}
+
+.contact-info h3 {
+   font-weight: bold; 
+}
+
+/* Footer Section */
+.footer {
+   background-color: var(--dark); 
+   color: var(--light); 
+   text-align: center; 
+   padding: 20px; 
+}
+
+.footer p {
+   margin: 5px; 
+}
+
+/* Owl Carousel */
+.owl-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.owl-carousel .item {
+    background: var(--light);
+    padding: 15px;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.owl-carousel .item:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .car-models { 
+        padding: 10px; 
+    }
+
+    .car-model { 
+        width: 90%; /* Responsive width */
+        padding: 15px; 
+        margin: 10px auto; /* Centering the model cards */
+    }
+
+    .contact-info h3,
+    .footer p { 
+        font-size: 14px; /* Smaller text size for mobile */
+    }
+
+    .owl-carousel .item {
+        width: 80%; /* More responsive item width */
+    }
+}
